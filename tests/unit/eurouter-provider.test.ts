@@ -62,7 +62,7 @@ test("eurouter copy does not imply EU residency for inference", () => {
     "residency",
     "stays in the EU",
     "EU-hosted",
-    "sovereign",
+    "estate",
   ]) {
     assert.ok(
       !hint.toLowerCase().includes(claim.toLowerCase()),
