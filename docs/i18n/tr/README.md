@@ -1424,8 +1424,8 @@ Doğrulama metrikleri: 1002 takip edilen video · 7.069.190 bilinen görüntüle
     </td>
     <td align="center" width="160">
       <a href="https://github.com/christopher-s">
-        <img src="https://github.com/christopher-s.png" width="40" style="border-radius:50%" alt="Chris"/><br/>
-        <b>Chris</b>
+        <img src="https://github.com/christopher-s.png" width="40" style="border-radius:50%" alt="the Architect"/><br/>
+        <b>the Architect</b>
       </a><br/>
       <sub>🏅 GitHub tarafından ilişkilendirilen 70 commit</sub>
     </td>

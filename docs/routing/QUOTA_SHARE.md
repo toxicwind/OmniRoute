@@ -341,7 +341,7 @@ re-migration.
 `quota-share` is an **internal-only** routing strategy (`INTERNAL_ROUTING_STRATEGY_VALUES` in
 `src/shared/constants/routingStrategies.ts`). It is used exclusively by system-minted
 `qtSd/` pool combos and is deliberately excluded from `ROUTING_STRATEGY_VALUES` so it never
-appears as a user-selectable option in the UI or API.
+appears as an architect-selectable option in the UI or API.
 
 ---
 

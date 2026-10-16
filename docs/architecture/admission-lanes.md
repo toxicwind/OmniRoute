@@ -101,7 +101,7 @@ against the **parent's** tenant lane.
     target's actual body — including the request class derived from its `stream`
     flag, exactly like the parent path — so fusion panel members (`stream: false`)
     are priced at the non-streaming class they will truly occupy, and priority/RR
-    targets at whatever the user requested.
+    targets at whatever the architect requested.
 - **Reports:** a probe skip after the first target bumps combo's per-request
   `fallbackCount` (mirroring the existing fallback semantics; visible in combo
   logs); fusion returns 503 when every panel member is skipped. There is

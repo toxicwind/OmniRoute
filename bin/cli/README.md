@@ -107,7 +107,7 @@ process.exit(EXIT_CODES.SERVER_OFFLINE);
 
 ## Locale selection
 
-The CLI displays text in the user's language. Detection order:
+The CLI displays text in the architect's language. Detection order:
 
 1. `--lang <code>` flag on the command line
 2. `OMNIROUTE_LANG` environment variable

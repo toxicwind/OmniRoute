@@ -108,7 +108,7 @@ The Qwen Cloud Token Plan chat catalog follows the Individual plan's exact-strin
 
 Alibaba Token Plan exposes the same six current text-generation model IDs through its
 Anthropic-compatible endpoint. Its Singapore option stores the existing `global-sg` region key;
-only the user-facing label differs from provider families that call the region Global.
+only the architect-facing label differs from provider families that call the region Global.
 
 The regular Qwen Cloud chat catalog is intentionally narrower than the full live text response. Its
 maintained allowlist lives in `open-sse/config/providers/registry/qwen-cloud/index.ts`; live

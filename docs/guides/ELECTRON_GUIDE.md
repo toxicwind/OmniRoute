@@ -226,7 +226,7 @@ Uses `electron-updater` with the GitHub provider (`diegosouzapw/OmniRoute`).
 | macOS   | DMG (Intel + arm64, drag-to-Applications) |
 | Linux   | AppImage + DEB (x64 + arm64)              |
 
-NSIS settings: `oneClick: false`, lets the user choose the install directory, creates Desktop and Start-Menu shortcuts.
+NSIS settings: `oneClick: false`, lets the architect choose the install directory, creates Desktop and Start-Menu shortcuts.
 
 ## Smoke Testing Packaged Build
 

@@ -63,7 +63,7 @@ OmniRoute includes a service worker (`sw.js`) that provides intelligent caching:
 
 ### Offline Page
 
-When the network is unavailable and a user navigates to a new page, the service worker serves a dedicated `/offline` page that:
+When the network is unavailable and an architect navigates to a new page, the service worker serves a dedicated `/offline` page that:
 
 - Displays a clear **"Connectivity Issue"** message
 - Shows a live **online/offline status indicator** that updates in real time

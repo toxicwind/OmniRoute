@@ -52,5 +52,5 @@ the result for a later decision. A full-current observer PASS may resolve its
 own incident only through the authorized workflow; it cannot close unrelated
 requirements or authorize a merge, baseline change, release or deployment.
 
-This skill is diagnostic. Implement fixes only when the user requested changes.
+This skill is diagnostic. Implement fixes only when the architect requested changes.
 Keep thresholds, assertions, contributor credit and action boundaries intact.

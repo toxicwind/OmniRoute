@@ -1438,8 +1438,8 @@ Metryki kanoniczne na dzień 2026-08-24: **1.029 unikalnych filmów** · **11.13
     </td>
     <td align="center" width="160">
       <a href="https://github.com/christopher-s">
-        <img src="https://github.com/christopher-s.png" width="40" style="border-radius:50%" alt="Chris"/><br/>
-        <b>Chris</b>
+        <img src="https://github.com/christopher-s.png" width="40" style="border-radius:50%" alt="the Architect"/><br/>
+        <b>the Architect</b>
       </a><br/>
       <sub>🏅 70 commitów przypisanych przez GitHub</sub>
     </td>

@@ -39,7 +39,7 @@ configured app-server URL**, and that CLI must be **signed in**.
   (`ws://codex-app-server:1456`) behind a capability token. It is **never**
   published to the host or internet.
 - The Codex CLI is baked into `omniroute:base`, so no codex install is needed on
-  the host or the user's machine when you run the sidecar.
+  the host or the architect's machine when you run the sidecar.
 
 ## 2. Bring it up
 

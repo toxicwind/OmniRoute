@@ -259,7 +259,7 @@ independent.
 
 When you expose OmniRoute through a tunnel, the dashboard and OAuth flows must
 build callback URLs against the **public** hostname, not `localhost`. Otherwise
-the OAuth provider redirects the user back to a URL its servers cannot reach,
+the OAuth provider redirects the architect back to a URL its servers cannot reach,
 and the handshake fails.
 
 Dashboard edits and settings saves do not require pinning the tunnel hostname in

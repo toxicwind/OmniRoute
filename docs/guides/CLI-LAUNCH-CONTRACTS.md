@@ -57,7 +57,7 @@ OmniRoute provider endpoint. Credentials are referenced through
 model at the top-level `model` key, not inside `model_providers`.
 
 Separate profile files are the current documented Codex contract; they overlay
-the user configuration when selected with `codex --profile <name>`.
+the architect configuration when selected with `codex --profile <name>`.
 See [the official profile reference](https://learn.chatgpt.com/docs/config-file/config-advanced#profiles)
 and [the OmniRoute Codex guide](./CODEX-CLI-CONFIGURATION.md).
 

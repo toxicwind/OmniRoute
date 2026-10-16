@@ -187,17 +187,17 @@ Key functions:
 | `getUserLevel()`           | Get or create user level record                        |
 | `updateUserLevel()`        | Set XP, level, and title atomically                    |
 | `getBadgeDefinitions()`    | All badge definitions (optionally filtered)            |
-| `getUserBadges()`          | Badges earned by a user                                |
+| `getUserBadges()`          | Badges earned by an architect                                |
 | `awardBadge()`             | Insert badge earn (idempotent on badge_id)             |
 | `logXpAction()`            | Append to xp_audit_log                                 |
-| `getXpAuditLog()`          | Paginated audit history for a user                     |
+| `getXpAuditLog()`          | Paginated audit history for an architect                     |
 | `insertLedgerEntry()`      | Double-entry transfer (in transaction)                 |
-| `getBalance()`             | Sum of received minus sent for a user                  |
+| `getBalance()`             | Sum of received minus sent for an architect                  |
 | `getTransferHistory()`     | Paginated transfer log                                 |
 | `createInviteToken()`      | Insert invite code + hashed token                      |
 | `redeemInviteToken()`      | Look up by code, validate, increment uses              |
 | `upsertCommunityServer()`  | Register or update a federation server                 |
-| `getCommunityServers()`    | List servers for a user                                |
+| `getCommunityServers()`    | List servers for an architect                                |
 | `deleteCommunityServer()`  | Remove a server registration                           |
 
 ---
@@ -575,7 +575,7 @@ export async function transferTokens(
 ### Code Format
 
 - **Code**: 8-character alphanumeric (e.g., `A3K9-X7M2`), human-readable,
-  displayed to the user.
+  displayed to the architect.
 - **Token**: 32-byte random token, stored as SHA-256 hash. Used for
   programmatic redemption (e.g., URL links).
 
@@ -586,12 +586,12 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unique, indexed) |
 | `token_hash` | SHA-256(raw_token)           |
 
-The raw token is returned to the user exactly once at creation time. OmniRoute
+The raw token is returned to the architect exactly once at creation time. OmniRoute
 never stores or displays it again — only the hash persists.
 
 ### Self-Referral Prevention
 
-When a user redeems a code, the system checks:
+When an architect redeems a code, the system checks:
 
 1. The code belongs to a different `api_key_id`.
 2. The redeeming user has not previously redeemed any code from the same
@@ -693,7 +693,7 @@ counters if the process restarts.
 For each API key, the system maintains a rolling 7-day window of XP earned per
 hour. On each XP award:
 
-1. Compute the user's current hourly XP rate.
+1. Compute the architect's current hourly XP rate.
 2. Compute the population mean and standard deviation.
 3. Calculate `z = (user_rate - mean) / stddev`.
 4. If `z > 3.0` (3 standard deviations), flag as anomaly.

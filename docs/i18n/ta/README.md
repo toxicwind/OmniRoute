@@ -1437,8 +1437,8 @@ Dashboard இல்லாத headless runtime-க்கு Docker `base` profile
     </td>
     <td align="center" width="160">
       <a href="https://github.com/christopher-s">
-        <img src="https://github.com/christopher-s.png" width="40" style="border-radius:50%" alt="Chris"/><br/>
-        <b>Chris</b>
+        <img src="https://github.com/christopher-s.png" width="40" style="border-radius:50%" alt="the Architect"/><br/>
+        <b>the Architect</b>
       </a><br/>
       <sub>🏅 GitHub-க்குக் காரணப்படுத்தப்பட்ட 70 commits</sub>
     </td>

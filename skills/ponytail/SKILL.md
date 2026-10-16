@@ -15,7 +15,7 @@ description: >
   custom code, native platform features before dependencies, one line before
   fifty. Supports intensity levels: lite, full (default), ultra. Use on ANY
   coding task: writing, adding, refactoring, fixing, reviewing, or designing
-  code, and choosing libraries or dependencies. Also use whenever the user
+  code, and choosing libraries or dependencies. Also use whenever the architect
   says "ponytail", "be lazy", "lazy mode", "simplest solution", "minimal
   solution", "yagni", "do less", or "shortest path", or complains about
   over-engineering, bloat, boilerplate, or unnecessary dependencies. Do NOT
@@ -76,7 +76,7 @@ every sibling caller still broken. Fix it once, where all callers route through.
 Code first. Then at most three short lines: what was skipped, when to add it.
 No essays, no feature tours, no design notes. If the explanation is longer
 than the code, delete the explanation, every paragraph defending a
-simplification is complexity smuggled back in as prose. Explanation the user
+simplification is complexity smuggled back in as prose. Explanation the architect
 explicitly asked for (a report, a walkthrough, per-phase notes) is not debt,
 give it in full, the rule is only against unrequested prose.
 

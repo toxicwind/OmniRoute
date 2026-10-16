@@ -736,7 +736,7 @@ const PATTERN_PATTERNS = [/\bI\s+usually\s+([^.,\n]+)/gi, /\bI\s+always\s+([^.,\
 
 ### What Gets Extracted
 
-When a user says:
+When an architect says:
 
 > "I prefer TypeScript. I'll use Postgres for this project. I always commit before pushing. I don't like Python."
 > Extraction produces 4 memories:

@@ -11,7 +11,7 @@ OmniRoute CLI commands authenticate against the local management API using a
 request header.
 
 This allows CLI subcommands (`omniroute status`, `omniroute providers`, etc.)
-to call management endpoints without requiring the user to supply a JWT or
+to call management endpoints without requiring the architect to supply a JWT or
 password on every invocation.
 
 ## How it works

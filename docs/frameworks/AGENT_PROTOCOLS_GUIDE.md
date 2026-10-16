@@ -16,7 +16,7 @@ OmniRoute exposes three different agent-related surfaces. They look similar at f
 | Surface                       | Best for                                                                                                                                   | Transport                   | Standard             |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | -------------------- |
 | **A2A — Agent-to-Agent**      | Cross-agent collaboration with peer agents that speak the A2A protocol                                                                     | JSON-RPC 2.0 over HTTP      | A2A v0.3 (open spec) |
-| **ACP — CLI Agents Registry** | Detecting / registering / launching CLI coding agents installed on the user's machine (Cursor, Cline, Codex CLI, Claude Code, Aider, etc.) | HTTP REST                   | OmniRoute-specific   |
+| **ACP — CLI Agents Registry** | Detecting / registering / launching CLI coding agents installed on the architect's machine (Cursor, Cline, Codex CLI, Claude Code, Aider, etc.) | HTTP REST                   | OmniRoute-specific   |
 | **Cloud Agents**              | Submitting long-running coding tasks to external cloud services (Codex Cloud, Devin, Jules, Cursor Cloud)                                  | HTTP REST + DB-backed tasks | OmniRoute-specific   |
 
 The three are independent — pick any subset.
@@ -76,7 +76,7 @@ See [A2A-SERVER.md](./A2A-SERVER.md) for transport details, agent card structure
 
 ### What it is
 
-ACP is OmniRoute's **local CLI agent inventory**. It detects which coding CLIs are installed on the host (Cursor, Cline, Claude Code, Codex CLI, Continue, etc.), resolves their versions, and surfaces them to the dashboard so the user can wire each CLI to point at OmniRoute.
+ACP is OmniRoute's **local CLI agent inventory**. It detects which coding CLIs are installed on the host (Cursor, Cline, Claude Code, Codex CLI, Continue, etc.), resolves their versions, and surfaces them to the dashboard so the architect can wire each CLI to point at OmniRoute.
 
 The HTTP surface is an internal inventory that powers the "CLI Tools" UI and
 CLI fingerprint tracking (see [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Separately,

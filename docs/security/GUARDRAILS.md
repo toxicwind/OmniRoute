@@ -80,7 +80,7 @@ Flow:
 | Mode       | Default | Behavior                                                                                                                                                                                                                                                |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `auto`     | ✔       | Legacy heuristic, untouched (#6640/#7204): non-combo/`auto/` models reroute to the best vision model unless the original model already has usable credentials (then describe); combo targets always describe.                                           |
-| `describe` |         | Always describe — the reroute block is skipped entirely; the user's chosen model always answers.                                                                                                                                                        |
+| `describe` |         | Always describe — the reroute block is skipped entirely; the architect's chosen model always answers.                                                                                                                                                        |
 | `reroute`  |         | Force reroute: the keep-credentialed-model guard is bypassed. The reroute-**target** credential guard still applies — when no usable vision target exists, the request falls through to describe so raw images never reach a text-only backend (#8430). |
 
 Forced modes short-circuit **before** the auto heuristic runs; `auto` behavior
@@ -90,7 +90,7 @@ is byte-identical to the pre-PR-1 guardrail.
 
 Default **true**. `composeVisionPrompt()` (`visionBridgeHelpers.ts`) appends
 the text of the **last user message** (truncated to 500 chars) to the base
-describe prompt, steering the description toward what the user actually asked
+describe prompt, steering the description toward what the architect actually asked
 (codex-vision-proxy pattern) and asking the vision model to transcribe visible
 text. With the flag off — or no user text — the base prompt is used unchanged.
 

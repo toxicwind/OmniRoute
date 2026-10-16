@@ -19,7 +19,7 @@ Total providers: **358**. See category breakdown below.
 - **OAuth** — sign-in flow handled by OmniRoute, no API key needed
 - **Web cookie** — wraps the provider's web app via cookie auth
 - **API key** — paid provider configured via API key (free credits may apply)
-- **Local** — runs on the user's machine (Ollama, LM Studio, vLLM, etc.)
+- **Local** — runs on the architect's machine (Ollama, LM Studio, vLLM, etc.)
 - **Search** — web search providers
 - **Audio** — audio-only providers (TTS/STT)
 - **Upstream proxy** — providers that proxy to other providers

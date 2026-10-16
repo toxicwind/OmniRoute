@@ -90,7 +90,7 @@ When you need to embed a new upstream-provided value that:
 
 - **Read from `resolvePublicCred()` / `resolvePublicCredMulti()` only** — never call `decodePublicCredBytes()` directly outside the helper.
 - The helper is intentionally cheap (linear byte XOR) and safe to call at module-load time; defaults are computed once.
-- The env override always wins. If a user sets `PROVIDER_OAUTH_CLIENT_SECRET=GOCSPX-myown`, the helper passes that raw value straight through.
+- The env override always wins. If an architect sets `PROVIDER_OAUTH_CLIENT_SECRET=GOCSPX-myown`, the helper passes that raw value straight through.
 
 ### 3. Forbidden patterns
 

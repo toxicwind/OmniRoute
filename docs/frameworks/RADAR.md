@@ -164,7 +164,7 @@ no contributor grant regardless of PR count. Finite purchases, donations, contri
 manual grants accumulate from the current expiration; lifetime dominates. A rank change never
 retroactively revokes or shortens time already awarded.
 
-The hosted license is personal and the user-facing rule is one active installation at a time. This
+The hosted license is personal and the architect-facing rule is one active installation at a time. This
 release does **not** claim a hardware lock: the OSS sync does not fingerprint hardware or maintain a
 cryptographic device lease. At the verified private-server revision above, implemented enforcement
 is entitlement validation plus a manual-review signal when the same live key is seen from a fourth
@@ -278,7 +278,7 @@ degrades the catalog to `community`; it must not be reported as a successful liv
 
 ### Private admin-panel link
 
-`RADAR_ADMIN_URL` optionally adds **Radar Admin ↗** immediately after the user-facing
+`RADAR_ADMIN_URL` optionally adds **Radar Admin ↗** immediately after the architect-facing
 Radar item in the Costs sidebar section. It has deliberately no default: when the variable is
 unset or invalid, the static sidebar, command palette, and sidebar-customization screen contain no
 admin item and no private URL.

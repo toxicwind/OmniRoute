@@ -112,7 +112,7 @@ cost =
 
 ### Pricing Sync
 
-Pricing data is auto-synced from LiteLLM via the `/api/pricing/sync` endpoint (triggered by the built-in cron task, not a user-facing env var):
+Pricing data is auto-synced from LiteLLM via the `/api/pricing/sync` endpoint (triggered by the built-in cron task, not an architect-facing env var):
 
 ```bash
 # Manual trigger

@@ -1437,8 +1437,8 @@ port kan, nítorí náà kò sí package CLI-nìkan lọ́tọ̀ ní báyìí.
     </td>
     <td align="center" width="160">
       <a href="https://github.com/christopher-s">
-        <img src="https://github.com/christopher-s.png" width="40" style="border-radius:50%" alt="Chris"/><br/>
-        <b>Chris</b>
+        <img src="https://github.com/christopher-s.png" width="40" style="border-radius:50%" alt="the Architect"/><br/>
+        <b>the Architect</b>
       </a><br/>
       <sub>🏅 Àwọn àtúnṣe 70 tí a dá mọ́ GitHub</sub>
     </td>

@@ -159,7 +159,7 @@ the local dashboard.
   `resolveSpawnArgs(apiKey, PORT)` in `src/lib/services/installers/ninerouter.ts`,
   which is a fixed allowlist of supported binaries.
 - Stdout/stderr is buffered in memory (5 MB cap, see `_lib.ts`) — no on-disk
-  write unless the user enables logging from the dashboard.
+  write unless the architect enables logging from the dashboard.
 
 **v3.8.6 mitigation**: no functional change. The minimal build profile
 (`OMNIROUTE_BUILD_PROFILE=minimal`) replaces
