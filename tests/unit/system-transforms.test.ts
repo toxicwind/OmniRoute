@@ -61,7 +61,7 @@ test("defaults: OpenWebUI anchors include canonical URLs", () => {
 });
 
 test("defaults: Pi anchors include package documentation paths", () => {
-  assert.ok(PI_PARAGRAPH_ANCHORS.includes("@earendil-works/pi-coding-agent"));
+  assert.ok(PI_PARAGRAPH_ANCHORS.includes("tau"));
 });
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -250,7 +250,7 @@ test("applySystemTransformPipeline: claude provider drops Pi documentation parag
         text: [
           "You are an expert coding assistant operating inside pi, a coding agent harness.",
           "Guidelines:\n- Be concise.",
-          "Pi documentation (read only when the user asks about pi itself):\n- Main documentation: /Users/test/.nvm/versions/node/v24.11.1/lib/node_modules/@earendil-works/pi-coding-agent/README.md",
+          "Pi documentation (read only when the user asks about pi itself):\n- Main documentation: /Users/test/.nvm/versions/node/v24.11.1/lib/node_modules/tau/README.md",
         ].join("\n\n"),
       },
     ],
@@ -261,7 +261,7 @@ test("applySystemTransformPipeline: claude provider drops Pi documentation parag
   assert.ok(result.appliedOpKinds.includes("drop_paragraph_if_contains"));
   assert.ok(out.includes("expert coding assistant operating inside pi"));
   assert.ok(out.includes("Guidelines:"));
-  assert.ok(!out.includes("@earendil-works/pi-coding-agent"));
+  assert.ok(!out.includes("tau"));
   assert.ok(!out.includes("Pi documentation"));
 });
 
@@ -462,7 +462,7 @@ const UI_DEFAULTS_SNAPSHOT = {
             "github.com/open-webui/open-webui",
             "openwebui.com",
             "docs.openwebui.com",
-            "@earendil-works/pi-coding-agent",
+            "tau",
             "/.pi/",
             "Pi documentation (read only when the user asks about pi itself",
             "hermes-agent.nousresearch.com",

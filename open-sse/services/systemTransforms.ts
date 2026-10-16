@@ -117,7 +117,7 @@ export const OPENWEBUI_PARAGRAPH_ANCHORS = [
 export const OPENWEBUI_IDENTITY_PREFIXES = ["You are Open WebUI"];
 
 export const PI_PARAGRAPH_ANCHORS = [
-  "@earendil-works/pi-coding-agent",
+  "tau",
   "/.pi/",
   "Pi documentation (read only when the user asks about pi itself",
 ];
