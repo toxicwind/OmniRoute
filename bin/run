@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# forge/router/weasel — OmniRoute (MCP routing gateway, Next.js). bin/run.
+#
+# Primary operation: route MCP/LLM traffic (omniroute gateway; daemon is .off
+# on the estate). Prebuild gate = `npm run check:native-deps`. This rig surfaces
+# the router without a full Next.js build (node_modules not vendored).
+#
+# Usage:
+#   bin/run            structural boot (scripts + entrypoints, fast)
+#   bin/run verify     npm run omniroute:verify (needs deps installed)
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+NODE="${NODE:-$(command -v node 2>/dev/null || true)}"
+for c in "$NODE" /usr/bin/node /usr/local/bin/node; do
+  [ -n "$c" ] && [ -x "$c" ] && { NODE="$c"; break; }
+done
+[ -n "${NODE:-}" ] || { echo "FAIL: node not found"; exit 1; }
+
+case "${1:-boot}" in
+  verify)
+    echo "== weasel run: npm run omniroute:verify =="
+    exec npm run omniroute:verify
+    ;;
+  boot|*)
+    echo "== forge/router/weasel run: structural boot (OmniRoute router) =="
+    "$NODE" -e "
+      const d=require('./package.json');
+      const need=['check:native-deps','omniroute:verify','lint','build'];
+      const miss=need.filter(s=>!d.scripts || !(s in d.scripts));
+      console.log('name:', d.name, '| scripts ok:', need.filter(s=>d.scripts&&(s in d.scripts)).join(','));
+      if(miss.length){ console.log('FAIL: missing scripts', miss); process.exit(1);}
+    " || exit 1
+    echo "OK: router package scripts present (check:native-deps / omniroute:verify / lint / build)"
+    echo "router daemon state: .off (not supervised on this box). MCP router = vansrouter:20128."
+    ;;
+esac

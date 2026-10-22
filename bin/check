@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# forge/router/weasel — OmniRoute (MCP routing gateway, Next.js). bin/check.
+#
+# Fast self-test (PASS/FAIL), no build:
+#   1. package.json parses; verify/lint/build/check:native-deps scripts exist.
+#   2. Router CLI entrypoints present (bin/omniroute.mjs, bin/mcp-server.mjs).
+#   3. Source dirs present (src/).
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+echo "== forge/router/weasel check: start =="
+NODE="${NODE:-$(command -v node 2>/dev/null || true)}"
+for c in "$NODE" /usr/bin/node /usr/local/bin/node; do
+  [ -n "$c" ] && [ -x "$c" ] && { NODE="$c"; break; }
+done
+[ -n "${NODE:-}" ] || { echo "FAIL: node not found"; exit 1; }
+
+"$NODE" -e "
+  const d=require('./package.json');
+  const need=['check:native-deps','omniroute:verify','lint','build'];
+  const miss=need.filter(s=>!d.scripts||!(s in d.scripts));
+  if(miss.length){ console.log('FAIL: missing scripts', miss); process.exit(1);}
+  console.log('OK: package scripts present: '+need.join(', '));
+" || exit 1
+
+for f in bin/omniroute.mjs bin/mcp-server.mjs; do
+  [ -f "$f" ] && echo "OK: $f present" || { echo "FAIL: $f missing"; exit 1; }
+done
+[ -d src ] && echo "OK: src/ present" || echo "WARN: src/ missing"
+echo "WEASEL (OmniRoute) CHECK: PASS"
+exit 0
