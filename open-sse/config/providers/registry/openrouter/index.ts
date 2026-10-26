@@ -27,3 +27,20 @@ export const openrouterProvider: RegistryEntry = {
   passthroughModels: true,
   models: [{ id: "auto", name: "Auto (Best Available)" }],
 };
+
+// Lane-health recon (probed live 2026-10-26, kappa session):
+// full dossier at estate/docs/recon/openrouter-privacy-routing-2026-10-26.md
+// - Guardrail/privacy blocks surface as HTTP 404 with the body
+//   "0 endpoints out of N requested are available matching your guardrail
+//   restrictions and data policy." plus structured
+//   metadata.failed_routing_step="Filter by Guardrails" and
+//   metadata.ineligibility_reasons[].reason in {model-ignored-by-guardrail,
+//   zdr-violation-by-account, zdr-violation-by-guardrail} — PERMANENT, never
+//   retryable (the old message text no longer matches; match these fields).
+// - 402 "Insufficient credits" is a TERMINAL account state (credits_exhausted),
+//   not a cooldown — verified on every paid model.
+// - ":free" ids are per-model, not per-account: some 404 ("unavailable for
+//   free"), some 429 (provider error), some 200 — never assume a :free id works.
+// - /api/v1/auth/key (above) is the ONLY key-validation endpoint; /api/v1/key
+//   returns 401 "Missing Authentication header" for ANY Bearer key — do not
+//   probe it as a liveness check (it false-negatived keypool keys).
